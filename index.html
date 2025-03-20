@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+
+<body>
+  <header>
+    <div class="header__container">
+      <div class="header__links-background">
+        <div class="header__line-container" id="headerLineAndBacklight">
+          <hr class="header__line">
+          <div class="header__line-backlight"></div>
+        </div>
+        <div class="header__links-container">
+          <div class="header__links">
+            <a class="header__link" id="headerLinkOne" onclick="scrollToSectionHome()" data-ru="Главная"
+              data-en="Home">Главная</a>
+            <a class="header__link" id="headerLinkTwo" onclick="scrollToSectionAbout()" data-ru="Обо мне"
+              data-en="About Me">Обо мне</a>
+            <a class="header__link" id="headerLinkThree" onclick="scrollToSectionSkills()" data-ru="Навыки"
+              data-en="Skills">Навыки</a>
+            <a class="header__link" id="headerLinkFour" onclick="scrollToSectionMyWorks()" data-ru="Мои работы"
+              data-en="My Works">Мои работы</a>
+            <a class="header__link" id="headerLinkFive" onclick="scrollToSectionContacts()" data-ru="Контакты"
+              data-en="Contacts">Контакты</a>
+          </div>
+        </div>
+      </div>
+      <label class="header__translator-button">
+        <input type="checkbox" id="translator-toggle">
+        <span class="slider">
+          <span class="labels">EN</span>
+        </span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <section class="home" id="home">
+      <div class="container">
+        <div class="home__message" id="message">
+          <p class="home__message-greering" data-ru="Привет, я" data-en="Hello, I am">Привет, я</p>
+          <p class="home__message-presentation" data-ru="Никита Разгуляев" data-en="Nikita Razgulyaev">Никита Разгуляев
+          </p>
+          <p class="home__message-time" id="time"></p>
+        </div>
+        <p class="home__title--1">Front-</p>
+        <img src="images/en.png" alt="Image" class="home__title--2">
+        <img src="images/d.png" alt="Image" class="home__title--3">
+        <p class="home__sub-title" data-ru="разработчик" data-en="developer">разработчик</p>
+        <div class="home__button-container">
+          <button class="home__button" onclick="scrollToSectionContacts()" data-ru="Связаться со мной"
+            data-en="Contact Me">Связаться со мной</button>
+        </div>
+        <img src="images/owl.png" alt="Image" class="home__image">
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div id="scrollPointAbout"></div>
+        <hr class="abouot__line">
+        <div class="circle"></div>
+        <div class="block-number--1">01</div>
+        <div class="about__content">
+          <div class="about__main-title">
+            <p class="about__main-title--1" data-ru="Обо" data-en="About">Обо</p>&nbsp;&nbsp;
+            <p class="about__main-title--2" data-ru="мне" data-en="Me">мне</p>
+          </div>
+          <p class="about__subtitle--1" data-ru="Образование" data-en="Education">Образование</p>
+          <p class="about__text--1"
+            data-ru="Прохожу обучение в колледже связи и информационных технологий на профессию “информационные системы и программирование” по специальности “разработчик веб и мультимедийных приложений”."
+            data-en="I am studying at the College of Communications and Information Technologies for the profession of 'Information Systems and Programming' specializing in 'Web and Multimedia Application Developer'.">
+            Прохожу обучение в колледже связи и информационных технологий на профессию
+            <span>“информационные системы и программирование”</span> по специальности <span>“разработчик веб и
+              мультимедийных приложений”</span>.
+          </p>
+          <p class="about__subtitle--2" data-ru="Опыт работы" data-en="Work Experience">Опыт работы</p>
+          <p class="about__text--2"
+            data-ru="Разрабатывал в рамках учебных проектов сайт отеля и сайт про UX/UI дизайн. Имею опыт разработки дизайн макетов в figma."
+            data-en="I developed a hotel website and a website about UX/UI design as part of my academic projects. I have experience in creating design layouts in Figma.">
+            Разрабатывал в рамках учебных проектов <span>сайт отеля</span> и <span>сайт про UX/UI дизайн</span>. Имею
+            опыт разработки дизайн макетов в figma.</p>
+          <button class="about__button" onclick="scrollToSectionMyWorks()" data-ru="Посмотреть работы"
+            data-en="View Works">Посмотреть работы</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="container">
+        <div id="scrollPointSkills"></div>
+        <hr class="skills__line">
+        <div class="circle"></div>
+        <div class="block-number--2">02</div>
+        <div class="skills__content">
+          <div class="skills__title">
+            <div class="skills__circle">
+              <div class="skills__title-container" id="skillsContainer">
+                <p class="skills__title--1" id="wordKey" data-ru="Ключевые" data-en="Key">Ключевые</p>
+                <p class="skills__title--2" data-ru="навыки" data-en="skills">навыки</p>
+              </div>
+            </div>
+            <div class="skills_top-arc"></div>
+            <div class="skills_bottom-arc"></div>
+          </div>
+          <div class="ckills__skill-example--1">
+            <div class="ckills__skill-image-container">
+              <img src="images/html.png" alt="Image" class="ckills__skill-image--1">
+            </div>
+            <p class="ckills__skill-name">HTML5</p>
+          </div>
+          <div class="ckills__skill-example--2">
+            <div class="ckills__skill-image-container">
+              <img src="images/css.png" alt="Image" class="ckills__skill-image--2">
+            </div>
+            <p class="ckills__skill-name">CSS3</p>
+          </div>
+          <div class="ckills__skill-example--3">
+            <div class="ckills__skill-image-container">
+              <img src="images/js.png" alt="Image" class="ckills__skill-image--3">
+            </div>
+            <p class="ckills__skill-name">JavaScript</p>
+          </div>
+          <div class="ckills__skill-example--4">
+            <div class="ckills__skill-image-container">
+              <img src="images/bootstrap.png" alt="Image" class="ckills__skill-image--4">
+            </div>
+            <p class="ckills__skill-name">Bootstrap5</p>
+          </div>
+          <div class="ckills__skill-example--5">
+            <div class="ckills__skill-image-container">
+              <img src="images/figma.png" alt="Image" class="ckills__skill-image--5">
+            </div>
+            <p class="ckills__skill-name">Figma</p>
+          </div>
+        </div>
+    </section>
+
+    <section class="my-works" id="myWorks">
+      <div class="container">
+        <div id="scrollPointWorks"></div>
+        <hr class="my-works__line">
+        <div class="circle"></div>
+        <div class="block-number--3">03</div>
+        <div class="my-works__content">
+          <div class="my-works__title">
+            <p class="my-works__title--1" data-ru="Мои" data-en="My">Мои</p>&nbsp;
+            <p class="my-works__title--2" data-ru="работы" data-en="Works">работы</p>
+          </div>
+          <div class="my-works__slider">
+            <div class="my-works__slide my-works__slide--1 my-works__slide-active" onclick="changeSlide(0)">
+              <img src="images/UX-and-UI-design.png" alt="Image" class="my-works__slide-image">
+              <div class="my-works__slide-blackout--1">
+                <div class="my-works__icon--1">1</div>
+                <a href="https://nikita-razgulyaev.github.io/UX-UI-design/" target="_blank" class="my-works__text--1"
+                  data-ru="Сайта про UX/UI дизайн" data-en="Website about UX/UI design">Сайта
+                  про UX/UI дизайн</a>
+              </div>
+            </div>
+            <div class="my-works__slide my-works__slide--2 my-works__slide-inactive" onclick="changeSlide(1)">
+              <img src="images/Grand Hotel.png" alt="Image" class="my-works__slide-image">
+              <div class="my-works__slide-blackout--2">
+                <div class="my-works__icon--2">2</div>
+                <div class="my-works__text--2" data-ru="Сайт Grant Hotel" data-en="Grand Hotel Website">Сайт Grant Hotel
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <footer id="contacts">
+      <div class="container">
+        <div id="scrollPointContacts"></div>
+        <p class="contacts__rights">©2025</p>
+        <div class="contacts__items">
+          <a href="mailto:razgulaevnikita407@gmail.com" target="_blank" class="contacts__item">
+            <div class="contacts__icon-background">
+              <img src="images/gmail.png" alt="Icon" class="contacts__icon">
+            </div>
+            <p class="contacts__text">razgulaevnikita407@gmail.com</p>
+          </a>
+          <a href="https://t.me/nikita_razgulyaev" target="_blank" class="contacts__item">
+            <div class="contacts__icon-background">
+              <img src="images/vk .png" alt="Icon" class="contacts__icon">
+            </div>
+            <p class="contacts__text">t.me/nikita_razgulyaev</p>
+          </a>
+          <a href="https://vk.com/nikita_razgulyaev" target="_blank" class="contacts__item">
+            <div class="contacts__icon-background">
+              <img src="images/tg.png" alt="Icon" class="contacts__icon">
+            </div>
+            <p class="contacts__text">vk.com/nikita_razgulyaev</p>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
