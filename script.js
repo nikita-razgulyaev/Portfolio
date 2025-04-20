@@ -98,28 +98,56 @@ window.addEventListener('scroll', updateLinePosition);
 
 
 function scrollToSectionHome() {
-  const home = document.getElementById('home');
-  home.scrollIntoView({ behavior: 'smooth' });
+  const section = document.getElementById('home');
+  const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+
+  window.scrollTo({
+    top: sectionPosition,
+    behavior: 'smooth'
+  });
 }
 
 function scrollToSectionAbout() {
-  const about = document.getElementById('about');
-  about.scrollIntoView({ behavior: 'smooth' });
+  const section = document.getElementById('about');
+  const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+  const offsetPosition = sectionPosition + 40;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth'
+  });
 }
 
 function scrollToSectionSkills() {
-  const skills = document.getElementById('skills');
-  skills.scrollIntoView({ behavior: 'smooth' });
+  const section = document.getElementById('skills');
+  const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+  const offsetPosition = sectionPosition + 30;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth'
+  });
 }
 
 function scrollToSectionMyWorks() {
-  const myWorks = document.getElementById('myWorks');
-  myWorks.scrollIntoView({ behavior: 'smooth' });
+  const section = document.getElementById('myWorks');
+  const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+  const offsetPosition = sectionPosition - 10;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth'
+  });
 }
 
 function scrollToSectionContacts() {
-  const contacts = document.getElementById('contacts');
-  contacts.scrollIntoView({ behavior: 'smooth' });
+  const section = document.getElementById('contacts');
+  const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+
+  window.scrollTo({
+    top: sectionPosition,
+    behavior: 'smooth'
+  });
 }
 
 function showMassage() {
